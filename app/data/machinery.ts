@@ -13,6 +13,11 @@ export interface Machinery {
     es: string[];
   };
   imageUrl: string;
+  producer: string;
+  model: string;
+  category: string;
+  weight: number; // in tons
+  year: number;
 }
 
 export const machineryList: Machinery[] = [
@@ -30,7 +35,12 @@ export const machineryList: Machinery[] = [
       en: ['30 Ton Operating Weight', '2.5m³ Bucket Capacity', 'High-efficiency Engine'],
       es: ['30 Ton de Peso Operativo', 'Capacidad de Cuchara de 2.5m³', 'Motor de Alta Eficiencia']
     },
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Excavator_Postiguet_Beach_2.jpg'
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Excavator_Postiguet_Beach_2.jpg',
+    producer: 'Caterpillar',
+    model: '320DL',
+    category: 'Excavators',
+    weight: 30,
+    year: 2018
   },
   {
     id: 'bulldozer-d9',
@@ -46,7 +56,12 @@ export const machineryList: Machinery[] = [
       en: ['410 HP Gross Power', 'Elevated Sprocket Design', 'Advanced Blade Control'],
       es: ['410 HP de Potencia Bruta', 'Diseño de Rueda Motriz Elevada', 'Control Avanzado de Hoja']
     },
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6d/CatD9T.jpg'
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6d/CatD9T.jpg',
+    producer: 'Caterpillar',
+    model: 'D9T',
+    category: 'Dozers',
+    weight: 50,
+    year: 2016
   },
   {
     id: 'wheel-loader-wl950',
@@ -62,7 +77,12 @@ export const machineryList: Machinery[] = [
       en: ['4.0m³ Bucket Capacity', 'Smooth Transmission', 'Ergonomic Cabin'],
       es: ['Capacidad de Cuchara de 4.0m³', 'Transmisión Suave', 'Cabina Ergonómica']
     },
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Front_end_loader_2.jpg'
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Front_end_loader_2.jpg',
+    producer: 'Komatsu',
+    model: 'WA380',
+    category: 'Wheel Loaders',
+    weight: 18,
+    year: 2020
   },
   {
     id: 'dump-truck-hd785',
@@ -78,7 +98,12 @@ export const machineryList: Machinery[] = [
       en: ['100 Ton Payload Capacity', 'Advanced Retarder System', 'Durable Frame'],
       es: ['Capacidad de Carga de 100 Toneladas', 'Sistema Retardador Avanzado', 'Chasis Duradero']
     },
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/11/Freightliner_M2_106_6x4_2014_%2814240376744%29.jpg'
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/11/Freightliner_M2_106_6x4_2014_%2814240376744%29.jpg',
+    producer: 'Volvo',
+    model: 'A40G',
+    category: 'Dumpers',
+    weight: 40,
+    year: 2019
   },
   {
     id: 'motor-grader-mg140',
@@ -94,7 +119,12 @@ export const machineryList: Machinery[] = [
       en: ['14ft Moldboard', 'All-Wheel Drive Option', 'High Visibility Cab'],
       es: ['Vertedera de 14 pies', 'Opción de Tracción Total', 'Cabina de Alta Visibilidad']
     },
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/74/Grader_2.jpg'
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/74/Grader_2.jpg',
+    producer: 'John Deere',
+    model: '772G',
+    category: 'Graders',
+    weight: 20,
+    year: 2017
   },
   {
     id: 'crane-tc50',
@@ -110,6 +140,11 @@ export const machineryList: Machinery[] = [
       en: ['50 Ton Lifting Capacity', 'Telescopic Boom', 'Advanced Safety System'],
       es: ['Capacidad de Elevación de 50 Ton', 'Pluma Telescópica', 'Sistema de Seguridad Avanzado']
     },
-    imageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/KATO_truck_mounted_crane.jpg'
+    imageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/KATO_truck_mounted_crane.jpg',
+    producer: 'Kato',
+    model: 'NK-500E',
+    category: 'Cranes',
+    weight: 39,
+    year: 2015
   }
 ];
