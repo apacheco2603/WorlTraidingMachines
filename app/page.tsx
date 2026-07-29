@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useLanguage } from './context/LanguageContext';
 import { machineryList } from './data/machinery';
 import SidebarFilter, { FilterState } from './components/SidebarFilter';
+import SidebarWidgets from './components/SidebarWidgets';
 
 export default function Home() {
   const { language } = useLanguage();
@@ -59,12 +60,15 @@ export default function Home() {
 
         <div className="flex flex-col md:flex-row gap-8">
           {/* Sidebar */}
-          <SidebarFilter 
-            filters={filters}
-            setFilters={setFilters}
-            availableProducers={availableProducers}
-            availableCategories={availableCategories}
-          />
+          <div className="w-full md:w-64 flex-shrink-0">
+            <SidebarFilter 
+              filters={filters}
+              setFilters={setFilters}
+              availableProducers={availableProducers}
+              availableCategories={availableCategories}
+            />
+            <SidebarWidgets />
+          </div>
 
           {/* Main Grid */}
           <div className="flex-1">

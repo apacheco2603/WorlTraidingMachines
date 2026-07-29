@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useLanguage } from '../context/LanguageContext';
 import { machineryList } from '../data/machinery';
 import { Suspense } from 'react';
+import SidebarWidgets from '../components/SidebarWidgets';
 
 function SearchResultsContent() {
   const { language } = useLanguage();
@@ -35,7 +36,12 @@ function SearchResultsContent() {
         </p>
       </div>
 
-      <div className="flex-1">
+      <div className="flex flex-col md:flex-row gap-8">
+        <div className="w-full md:w-64 flex-shrink-0">
+          <SidebarWidgets />
+        </div>
+
+        <div className="flex-1">
         {filteredMachinery.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {filteredMachinery.map((machine) => (
@@ -83,6 +89,7 @@ function SearchResultsContent() {
             </Link>
           </div>
         )}
+        </div>
       </div>
     </div>
   );

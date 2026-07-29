@@ -34,7 +34,7 @@ export default function SidebarFilter({ filters, setFilters, availableProducers,
   };
 
   return (
-    <div className="bg-slate-50 border border-slate-200 rounded-lg p-6 w-full md:w-64 flex-shrink-0">
+    <div className="bg-slate-50 border border-slate-200 rounded-lg p-6">
       <div className="flex justify-between items-center mb-6">
         <h2 className="font-bold text-lg text-slate-800">
           {language === 'es' ? 'Filtros' : 'Filters'}
