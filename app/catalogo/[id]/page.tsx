@@ -31,7 +31,7 @@ export default function MachineDetail({ params }: { params: Promise<{ id: string
   const selectedCountryName = countries.find(c => c.code === selectedCountry)?.name;
 
   const handleWhatsAppClick = (withShipping: boolean) => {
-    const phoneNumber = "1234567890"; // Reemplazar con el número real
+    const phoneNumber = "1987654321"; // Reemplazar con el número real
     const textEs = withShipping 
       ? `Hola, estoy interesado en cotizar la máquina ${machine.name.es} con envío a ${selectedCountryName}.`
       : `Hola, estoy interesado en cotizar la máquina ${machine.name.es}.`;

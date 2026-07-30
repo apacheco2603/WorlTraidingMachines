@@ -4,7 +4,7 @@ import { useLanguage } from "../context/LanguageContext";
 
 export default function FloatingWhatsApp() {
   const { language } = useLanguage();
-  const phoneNumber = "1234567890"; // Reemplazar con el número real
+  const phoneNumber = "1987654321"; // Reemplazar con el número real
   
   const textEs = "Hola, me gustaría recibir más información sobre sus maquinarias.";
   const textEn = "Hello, I would like to receive more information about your machinery.";
