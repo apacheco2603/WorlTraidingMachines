@@ -6,6 +6,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { machineryList } from '../data/machinery';
 import { Suspense } from 'react';
 import SidebarWidgets from '../components/SidebarWidgets';
+import MachineListItem from '../components/MachineListItem';
 
 function SearchResultsContent() {
   const { language } = useLanguage();
@@ -43,37 +44,9 @@ function SearchResultsContent() {
 
         <div className="flex-1">
         {filteredMachinery.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="flex flex-col">
             {filteredMachinery.map((machine) => (
-              <div key={machine.id} className="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow group flex flex-col">
-                <div className="relative h-48 w-full overflow-hidden bg-slate-100">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                    style={{ backgroundImage: `url('${machine.imageUrl}')` }}
-                  />
-                </div>
-                <div className="p-4 flex-1 flex flex-col">
-                  <div className="text-xs font-bold text-blue-600 mb-1 uppercase tracking-wider">
-                    {machine.producer}
-                  </div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-1 leading-tight">
-                    {machine.producer} {machine.model}
-                  </h3>
-                  <div className="text-sm text-slate-500 mb-4 flex gap-3">
-                    <span>{machine.year}</span>
-                    <span>•</span>
-                    <span>{machine.weight}t</span>
-                  </div>
-                  <div className="mt-auto">
-                    <Link 
-                      href={`/catalogo/${machine.id}`}
-                      className="block w-full text-center px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold rounded text-sm transition-colors"
-                    >
-                      {language === 'es' ? 'Ver Detalles' : 'View Details'}
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              <MachineListItem key={machine.id} machine={machine} language={language} />
             ))}
           </div>
         ) : (
