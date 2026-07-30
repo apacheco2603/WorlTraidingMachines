@@ -68,18 +68,20 @@ export default function SidebarWidgets() {
         </div>
         
         <div className="space-y-4 text-sm font-semibold">
-          <div className="flex items-center gap-2">
-            <label className="w-10">USD:</label>
-            <input 
-              type="number" 
-              value={usdAmount}
-              onChange={(e) => setUsdAmount(e.target.value)}
-              className="flex-1 px-2 py-1 text-black border border-transparent rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-              placeholder="0"
-            />
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <label className="w-10">USD:</label>
+              <input 
+                type="number" 
+                value={usdAmount}
+                onChange={(e) => setUsdAmount(e.target.value)}
+                className="w-20 px-2 py-1 bg-white text-black font-bold border border-slate-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                placeholder="0"
+              />
+            </div>
             <button 
               onClick={handleConvert}
-              className="px-3 py-1 bg-slate-700 hover:bg-slate-800 border border-slate-500 rounded text-xs tracking-wider transition-colors"
+              className="px-4 py-1 bg-slate-700 hover:bg-slate-800 border border-slate-500 rounded text-xs uppercase tracking-wider transition-colors"
             >
               {language === 'es' ? 'convertir' : 'convert'}
             </button>
